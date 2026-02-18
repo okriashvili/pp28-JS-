@@ -106,3 +106,22 @@ console.log("your discount is:", discount);
 // we can nest as much else if statements as we want.
 // else if statements has same syntaxt as if statement, but it must be after if statement, and before else statement, 
 // and it must be followed by curly braces, and it can have condition inside of parentheses.
+
+
+// homework about conditional statements in JS
+/* დაწერეთ პროგრამა, რომელიც მომხმარებელს მოსთხოვს მისი ასაკის შეტანას. უნდა
+დაადგინოთ, რომ თუ სრულწლოვანი იქნება alert ფუნქციის დახამრებით გამოუტანოს
+შეტყობინება, რომ სრულწლოვანია თუ არა და „არასრულწლოვანია“.
+ასევე მოახდინეთ შემდეგი მაგალითის შედეგის გამოტანა საიტზე:
+(true && (false || true)) || ( ((5 > 7) && (6 == 6)) || (true && true )) */ 
+// let userAge = prompt("Please enter your age:");
+// if (userAge >= 18) {
+//     console.log("you are an adult");
+// } else { 
+//     console.log("you aren't an adult");
+// };
+
+// 2nd - (true && (false || true)) || ( ((5 > 7) && (6 == 6)) || (true && true )) 
+let result1 = (true && (false || true)) || ( ((5 > 7) && (6 == 6)) || (true && true ));
+let result2 = "result1 is: true";
+console.log(result1);
