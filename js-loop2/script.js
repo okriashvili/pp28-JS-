@@ -249,11 +249,11 @@ numList = [12, 23, 43, 35, 56, 76, 43, 16, 79, 9, 9];
 
 
 // count nums and break
-for (i = 3; i < 60; i++) {
-    console.log(i)
-    if (i <= 50) {  
+// for (i = 3; i < 60; i++) {
+//     console.log(i)
+//     if (i <= 50) {  
         
-    }
+//     }
 
-}
+// }
 
