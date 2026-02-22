@@ -211,15 +211,89 @@
 //         break;
 //     }
 //     console.log(i)    
-
 // } 
 
 
+// aray methods: 
+// push - add value at the end of aray, it take value which will be added in the last position
+numList = [1, 2, 3, 4, 5, 6, 7];
+numList.push(900)
+// console.log(numList);
 
 
+// unshift - add elements in the first position, at index[0]
+numList.unshift(0)
+// console.log(numList)
 
 
+// pop - deletes item which is at last position in the aray 
+numList.pop()
+// console.log(numList)
+
+// shift() - deletes item which is at the first position, index[0]
+
+numList.shift()
+// console.log(numList)
 
 
+// concat() - unites two aray, or we can unit 1aray
+// it takes argument in braces, if we give same aray as argument it will concat the values,  
+numList2 = [10, 20, 30, 10, 40]
+// console.log(numList.concat(numList))
 
+
+// indexOf() - returns the index of given elements 
+// if we have elements twive in aray it returns first elements index
+// console.log(numList2.indexOf(10))
+
+// includes() - return if the value is in aray, returns true or false
+// console.log(numList2.includes(10)) 
+
+// toString() turns aray into string 
+arayToString = numList2.toString()
+console.log(arayToString)
+console.log(typeof(arayToString))
+
+// reverse()
+// console.log(numList2.reverse())
+
+// slice and splice
+// slice - cuts the elements, according to the range we give
+// it takes two arguments, index of elements, and within that range which elements will be ocupied slice will cuts and returns
+console.log(numList2.slice(0, 3))
+// from 0 index to 3 index, sile slice() method will cuts 3 elements, 
+// starts from first given index, will cuts all the elements, but won't cut the second range  
+
+// splice - works like slice, removes elements from aray and returns them but works diferently
+// takes two argument: 1 - from which element he must start removing element, 
+// 2 argument considers - the amount of elements to be removed
+// 1st argument is taken as index, and from that index he will start removing items
+// 2nd argument is amont of next elements
+console.log(numList2)
+// console.log(numList2.splice(1, 3))
+// console.log(numList2)
+
+
+// little homework about aray
+/*მოცემულია კოდი, რომელმაც კონსოლზე უნდა გამოიტანოს მასივის ელემნტების ჯამი. აღმოაჩინეთ შეცდომა
+კოდში.
+let arr = [10, 20, 30, 40, 50];
+console.log(arr[1] + arr[2] + arr[3] + arr[4] + arr[5])*/
+let arr = [10, 20, 30, 40, 50];
+sumArr = 0
+for (let i = 0; i < arr.length; i++) {
+    sumArr += arr[i];
+    console.log(sumArr)
+}
+
+
+/*შექმენით ფუნქცია getFirstToy, ისე რომ დააბრუნოს მასზე გადაცემული toys მასივიდან პირველი ელემენტი.
+let toys = ['ოვერბორდი', 'პაზლი', 'Lego', 'Yo-yo'];*/ 
+let toys = ['ოვერბორდი', 'პაზლი', 'Lego', 'Yo-yo'];
+
+function myFunc(x) {
+    return toys[0]
+
+}
+console.log(myFunc(toys))
 
