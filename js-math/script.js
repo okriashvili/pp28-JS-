@@ -297,3 +297,77 @@ function myFunc(x) {
 }
 console.log(myFunc(toys))
 
+
+// builtin functions part two.
+// strings: split function - split strings by given symbol
+// argument must be given, otherwise if nothing give it turns string into aray
+// after split it puts rest elements into aray
+let txt = "lorem ibsum, hello world"
+console.log(txt.split("e"))
+
+// chatAt - takes number as argument, which check if we have chatarcter on that position, on given index
+// returns that character 
+console.log(txt.charAt(6))
+
+
+// join - unties elements inside the aray
+// join works with aray, since we have string and not aray it wont work
+
+console.log(txt.split(" ").join('#'))
+// even though we had string, what we did is that we split the string
+// as we know split method splits string and turns each element into aray, therefore first we splited which create aray 
+// after we use join method
+
+
+
+
+// number, math methods
+// parseInt - turns string into number, but we must use number symbols
+x = '6.56';
+// if float given, it rounds it to closest number
+console.log(parseInt(x))
+
+// if we want to turn into float, we can use parseFloat
+console.log(parseFloat(x)) 
+console.log(typeof(parseFloat(x))) 
+
+// or we can use Number object and it turns into number
+console.log(Number(x))
+// Number object has many methods which we can call by Number._methodNmae_
+
+
+
+// 2D aray > aray in aray: matrix
+let arrMatrix = [
+    [1, 2, 3, 4, 5],
+
+    [6, 7, 8, 9, 10], 
+
+    [11, 12, 13, 14, 15]
+]; 
+// in order to get elements from the aray, first we access to get the aray, then from that aray we catch the value 
+console.log(arrMatrix[1][3])
+// each aray has its index, and each elements in in-aray has its index.
+
+// to work with 2D aray, we need to use for loops inside the for loop 
+
+for (let i = 0; i < arrMatrix.length; i++) {
+    for (j = 0; j < arrMatrix[i].length; j++) {
+        console.log(arrMatrix[i][j])
+    }
+    console.log(arrMatrix[i])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
