@@ -60,7 +60,46 @@ console.log(`my first tutor is ${myClassTutors[0]}`) // will prints the first ob
 console.log(`my first tutor is ${myClassTutors[0].firstName}`) // nika
 
 // and we can nest object in aray and nest aray in nested objet and so on
-  
 
 
+// 2. მოცემულია პროდუქტების ლისტი:
+ products = [
+    {"cola": {
+        "price": 1.5,
+        "quantity": 10
+    }},
+    {"fanta": {
+        "price": 2.5,
+        "quantity": 5
+    }},
+    {"snickers": {
+        "price": 3.5,
+        "quantity": 12
+    }},
+    {"water": {
+        "price": 4.5,
+        "quantity": 8
+    }},
+    {"beer": {
+        "price": 6.5,
+        "quantity": 5
+    }}
+]    
+
+
+// ა. დაბეჭდეთ ყველა პროდუქტის დასახელება
+// for (let i = 0; i < products.length; i++) {
+//     console.log(Object.keys(products[i]))
+// }
+
+// გამოითვალეთ ყველა პროდუქტის ღირებულების ჯამი(ანუ პროდუქტის ფასი უნდა გაამრავლოთ რაოდენობაზე და დააჯამოთ)
+value = 0
+for (let i = 0; i < products.length; i++) {
+    productsPrice = products[i][Object.keys(products[i])[0]].price
+    productsQuantity = products[i][Object.keys(products[i])[0]].quantity
+    let totalFee = productsPrice * productsQuantity
+    value += totalFee
+
+}
+console.log(value)    
 
