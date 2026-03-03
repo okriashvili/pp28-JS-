@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="" href="script.js">
+    <title>JS Dom manipulation</title>
+</head>
+<body>
+    <h1 class="demo">company name</h1>
+    <p id="text", onclickr="addText()", ondblclick="removeText()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos libero odio eveniet perferendis? Eligendi, corrupti quia vel nam vitae ex cumque odio omnis, iure harum facilis doloribus rerum, error libero?
+    </p>
+    <p>first</p>
+    <p>second</p>
+    <p></p>
+    <div class="container" id="divContainer"> </div>
+
+    <button id="button" type="button", onclick="changeColorOnClick()">click to change color</button>
+    <button id="removeButton" type="button", onclick="removeDiv()">X</button>
+
+    <br><br><br><br><br>
+
+    <form id="forms" action="">
+        <input id="mailInput" placeholder="enter your mail" type="text" required oninvalid="setCustomValidity('ვაი შენს პატრონს')" oninput="setCustomValidity('')">
+        <!-- required means that input mustn't be empty
+        if we'll leave it empty it return warning letter in eglish
+        but we can change it and return warning letter in georgian
+        or return it what we want  
+        for that we need to manipulate via the event listener
+        1 - oninvalid=setCustomeValidity("what we want to return")
+        2 - oninput=setCustomValidity("must be empty")
+        setCustomerValidity is builtin function, we don't have to write create it
+
+        -->
+        <!-- <input id="submitButton" type="submit" onclick="validateMail()"> -->
+        <button type="button" id="submitButton" onclick="submitForm()">submit</button>
+        <p id="submitText"></p>
+    </form>
+
+
+
+
+
+    <br><br>
+    <hr>
+    <h3>about us</h3>
+    <form action="">
+        <input id="forma" placeholder="leave your mail to access info" type="text" required>
+        <button type="button" onclick="changeContent()">see the content</button>    
+        <p id="aboutus"></p>
+    </form>
+
+    <p id="paragraph1" style="display: none;">hello world</p>
+    <p id="paragraph2"></p>
+
+    <button type="button" onclick="displayContent()">click</button>
+    <button type="button" onclick="hideContent()">hide</button>
+
+
+    <hr>
+    <p id="count"></p>
+    <button type="button" onclick="increase()">+</button>
+    <button type="button" onclick="decrease()">-</button>
+    <hr>
+    <!-- homework -->
+    <div id="twoParagraphs">
+        <p>პირველი აბზაცი</p>
+        <p>მეორე აბზაცი</p>
+    </div>
+
+    <hr>
+
+    <p class="p">text1</p>
+    <p class="p">text2</p>
+
+    <hr>
+
+    <!-- 5 -->
+    <input id="button_1" type="submit" onclick="changep1()">
+    <p id="p1"></p>
+    <input id="button_2" type="submit" onclick="changep2()">
+    <p id="p2"></p>
+    <input id="button_3" type="submit" onclick="changep3()">
+    <p id="p3"></p>
+
+    <hr>
+
+    <!-- 6 -->
+    <p id="result"></p>
+    <input id="button_1" type="submit" value="2 + 2" onclick="sum()">
+    <input id="button_2" type="submit" value="3 * 3" onclick="multiplication()">
+    <input id="button_3" type="submit" value="4 / 4" onclick="devide()">
+
+    <!-- 7 -->
+    <hr>
+
+    <p id="elem1" onclick="myFunc1()">First Paragraph</p>
+    <p id="elem2" onclick="myFunc2()">Second Paragraph</p>
+    <p id="elem3" onclick="myFunc3()">Third Paragraph</p>
+
+    <!-- 8 -->
+    <hr>
+
+    <p id="btn"></p>
+    <input id="button" type="submit" value="ღილაკი" onclick="(func())">
+    <!-- if we want to link our js file to html documentation, we can use script tag and in src > write the files name and address -->
+    <script src="script.js"></script>
+
+    <!-- 9 -->
+    <hr>
+    
+    <p id="myText" onclick="myTextFunc()">Some text</p>
+    
+    <!-- 10 -->
+    <hr>
+    <button type="button" value="სუპერ ღილაკი" onmouseleave="eventMouseLeave()" onmouseover="eventMouseOver()"> სუპერ ღილაკი </button>
+    <p id="event"></p>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+</body>    
+</html>
