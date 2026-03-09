@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS Dom manipulation</title>
+    
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form onsubmit="validateForm()" name="form"> <!-- we use name rather than id, cause backend requires name -->
+        <input type="email" placeholder="enter your email: " id="emaIl"> 
+            
+        <br>
+        <input type="password" placeholder="passwork: " id="password">
+        <br>
+        <input type="submit" name="" id="submit" value="submit">
+        <br>
+        <p id="psswordMSG"></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

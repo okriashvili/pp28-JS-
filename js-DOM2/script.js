@@ -368,6 +368,13 @@
 
 // JS DOM manipulation part 2
 
+
+
+
+
+
+
+
 // working withs input, retrive the data we typed in input
 // at the end of selector or variable we
 nameInput = document.getElementById("nameInput");
@@ -387,19 +394,167 @@ function validateEmail() {
 }
 
 
-function validateAge() {
-    ageInput = document.getElementById("ageInput").value;
-    if (typeof ageInput != "number") {
-        alert("please enter valid age");
-    }
+// create calculator
+// numbers
+function one() {
+    value = document.getElementById("value").value += 1;
+}
 
-} 
+function two() {
+    value = document.getElementById("value").value += 2;
+}
 
-ageInput.addEventListener("click", validateAge)
+function three() {
+    value = document.getElementById("value").value += 3;
+}
+
+function four() {
+    value = document.getElementById("value").value += 4;
+}
+
+function five() {
+    value = document.getElementById("value").value += 5;
+}
+
+function six() {
+    value = document.getElementById("value").value += 6;
+}
+
+function seven() {
+    value = document.getElementById("value").value += 7;
+}
+
+function eight() {
+    value = document.getElementById("value").value += 8;
+}
+
+function nine() {
+    value = document.getElementById("value").value += 9;
+}
+
+// mathmatical expressions
+function add() {
+    value = document.getElementById("value").value += "+";
+}
+
+function subtract() {
+    value = document.getElementById("value").value += "-";
+}   
+
+function multiply() {
+    value = document.getElementById("value").value += "*";
+}   
+
+function devide() {
+    value = document.getElementById("value").value += "/";
+}   
+
+// calculate the result of the expression using eval function
+function result() {
+    // eval function helps us to calculate the mathematical expression, 
+    // which is written in input, and gives us the result
+    // so we don't have to write the function for each mathematical operation, 
+    // we can just write the expression in input and get the result with eval function
+    value = document.getElementById("value").value;
+    window.alert(eval(value));
+    document.getElementById("value").value = "";
+
+}
+
+// clear the input value
+function rem() {
+    document.getElementById("value").value = "";
+    // remove the enterd value in input, and make it empty again
+}
 
 
 
 
+
+// createElement from Jacascript, append in HTML and create event listeners on that element
+function createDivElement() {
+    // // document.body.style.backgroundColor = "red"
+    htmlBody = document.body;
+    createdDiv = document.createElement("div");
+    // createdDiv.style.display = "flex";
+    // createdDiv.style.alignItems = "center"
+    // createdDiv.style.justifyContent = "center"
+
+    createdDiv.style.position = "absolute";
+    createdDiv.style.width = "400px";
+    createdDiv.style.height = "400px";
+    createdDiv.style.backgroundColor = "black";
+    createdDiv.style.display = "flex";
+    createdDiv.style.alignItems = "center";
+    createdDiv.style.justifyContent = "center";
+
+    // created element we can append to the body, with appendChild method 
+    htmlBody.appendChild(createdDiv);
+    // if we appened  in body, it will appened in the last place
+    //  or we can appened into any element we want
+    // for that we need to access on that element
+
+    // setAttribute allows us to set attribute for created element
+    // since we create element in js, we can't manually set attribute on that element from HTM file(like class, id, name and so on)
+    // createdDiv.setAttribute("class", "jsDiv");
+    // // now, our created element has class named jsDiv, now we can select that element by classname
+    // jsDiv = document.getElementsByClassName("jsDiv");
+    // // jsDiv[0].style.backgroundColor = "red";
+    // console.log(jsDiv.innerHTML)
+
+    // setAttribute takes two argument:
+    // 1st is attribute, which attribuyte are we gonna set
+    // 2nd, attribute name 
+
+
+    // we created the element and append in HTML documentation
+    // now, we can create the event on that element
+    // we have two approach:
+    // call the event name on the variable
+    // equalize it to function, we can use arrow function as well
+    // myFunc = function() {window.alert("hello world")}
+
+    // 2nd - use the addEventLitsener() keyword and create event
+    // createdDiv.addEventListener("onclick", function() {window.alert("hello world"), console.log("event")})
+// createdDiv.addEventListener("click", function() {return window.alert("hello world")});
+    // addEventListener takes two argument:
+    // 1st is the event name, which event must create and execute
+    // 2nd is function, we can create function inside the brackets or use premade
+    // I mostly use the arrowfunction inside/ 
+
+
+    // now lets create new element inside the JS element
+    childElement = document.createElement("div");
+    childElement.style.width = "300px";
+    childElement.style.height = "300px";
+    childElement.style.display = "flex";
+    childElement.style.justifyContent = "center";
+    childElement.style.alignItems = "center";
+
+    childElement.style.backgroundColor = "blue";
+    createdDiv.appendChild(childElement);
+
+
+    // element in childElement
+    grandChildElement = document.createElement("div");
+    grandChildElement.style.width = "200px";
+    grandChildElement.style.height = "200px";
+    grandChildElement.style.display = "flex";
+    grandChildElement.style.backgroundColor = "yellow";
+    grandChildElement.style.justifyContent = "center";
+    grandChildElement.style.alignItems = "center";
+    childElement.appendChild(grandChildElement);
+}
+
+
+
+
+function validateForm() {
+    // emailInput = document.getElementById("emaIl");
+    // passwordInput = document.getElementById("password");
+    console.log("form is submitted");
+    alert("form is submitted");
+}
 
 
 

@@ -14,12 +14,55 @@
         <input type="text" placeholder="enter your last name: " id="lastInput">
         <br>
         <input type="text" placeholder="enter your mail: " id="emailInput">
-        <p id="msg">hello</p> 
+        <p id="msg"></p> 
         <br>
         <input type="number" placeholder="enter your age: " id="age">
         <br>
-        <button type="button" onclick="validateEmail()" onclick="validateAge()"> submit </button>
+        <button class="submit" type="button" onclick="validateEmail()" onclick="validateAge()"> submit </button>
     </form>
+
+
+    <hr>
+    <!-- calculator, eval function in JS -->
+    <!-- eval function allows us to do mathematical expressions and calculate the numbers -->
+   
+
+    <form action="" id="myCalculator">
+        <input id="value" type="text">
+        
+        <br>
+        
+        <button type="button" onclick="result()"> = </button>
+        <button type="button" onclick="add()"> + </button>
+        <button type="button" onclick="subtract()"> - </button>
+        <button type="button" onclick="devide()"> / </button>
+        <button type="button" onclick="multiply()"> * </button>
+        <button type="button" onclick="rem()"> C </button>
+        <button type="button" onclick="clear()"> C </button>
+
+        <br>
+
+        <button class="num" type="button" onclick="one()"> 1 </button>
+        <button class="num" type="button" onclick="two()"> 2 </button>
+        <button class="num" type="button" onclick="three()"> 3 </button>
+        <br>
+        <button class="num" type="button" onclick="four()"> 4 </button>
+        <button class="num" type="button" onclick="five()"> 5 </button>
+        <button class="num" type="button" onclick="six()"> 6 </button>
+        <br>
+        <button class="num" type="button" onclick="seven()"> 7 </button>
+        <button class="num" type="button" onclick="eight()"> 8 </button>
+        <button class="num" type="button" onclick="nine()"> 9 </button>
+    </form>
+    <hr> 
+    <!-- create emelent from javascript
+    createElement("") method allows us to create elements dinamicly from JS -->
+   
+
+
+    <br>
+    <p id="output"></p>
+    <button type="button" onclick="createDivElement()">Create Div</button>
 
 
     <script src="script.js"></script>

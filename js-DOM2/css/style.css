@@ -1,7 +1,8 @@
 input{
     margin: 5px;
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid rgb(108, 104, 104);
+    border-radius: 10px;
 }
 
 p { 
@@ -9,18 +10,31 @@ p {
     margin: 10px;
     padding: -5px;
     display: none;
-    font-size: 10px; 
+    font-size: 10px;
+}
+
+
+.submit {
+    margin: 10px;
+    padding: 5px;
+    width: 80px;
+    margin-left: 47px;
+    background-color: green;
+    color: green; 
+    border: 2px solid rgb(72, 69, 69);
+    border-radius: 10px;
 
 }
 
 
-button {
-    margin: 10px;
+.num {
+    margin: 5px;
     padding: 5px;
-    border: "2px, solid black";
-    background-color: "green";
-    /* color: green; */
-
+    width: 30px;
+    background-color: rgb(108, 104, 104);
+    color: white;
+    border: 2px solid rgb(72, 69, 69);
+    border-radius: 10px;
 }
 
 
