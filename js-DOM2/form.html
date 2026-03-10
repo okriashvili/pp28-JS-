@@ -9,16 +9,35 @@
 </head>
 <body>
     <h1>Form Validation</h1>
-    <form onsubmit="validateForm()" name="form"> <!-- we use name rather than id, cause backend requires name -->
-        <input type="email" placeholder="enter your email: " id="emaIl"> 
-            
+    <form onsubmit="return formValidation()" name="form"> 
+    <!-- we use name rather than id, cause backend requires name, when exchanging the value, it uses the nae attribute, rather than id or class  -->
+        <input type="email" placeholder="enter your email: " name="email"> 
+        <p id="mailMSG"></p>
+        <!-- same rule applies to input fields regarding the name attribute -->
         <br>
-        <input type="password" placeholder="passwork: " id="password">
+        <input type="password" placeholder="password: " name="password">
+        <p id="passwordMSG"></p>
+
         <br>
-        <input type="submit" name="" id="submit" value="submit">
+        <input type="submit" name="submit" value="submit">
         <br>
-        <p id="psswordMSG"></p>
+        <p id="loginMSG"></p>
     </form>
+
+    <br></br>
+    <hr>
+
+    <!-- working with files -->
+    <h2>working with files</h2>
+    <form action="">
+
+        <input type="file" id="file" multiple onchange="openFile(event)">
+        <!-- mulpitple keyword allows us to open multiple file, without it limit is only i file   -->
+        <p id="fileInput">hello world</p>
+
+    </form>
+
+    <a href="homework.html">register here</a>
 
     <script src="script.js"></script>
 </body>

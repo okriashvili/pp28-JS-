@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    <div class="container">
+        <h1>Form Validation</h1>
+        <div class="formWrapper">
+            <form action="" onsubmit="return formValidate()">
+                <h2> User Login </h2>
+
+                <!-- <p id="mainMSG"> hello world </p> -->
+                <span id="bothInvalid"></span>
+                <label for="userName">Username:</label>
+                <input type="text" id="userName" name="userName">
+                <span id="nameMSG"></span>
+
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password">
+                <span id="passMSG"></span>
+
+                <a href="#">No Account? Regisher Here</a>
+                <input type="submit" name="submit" id="submit">
+
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
