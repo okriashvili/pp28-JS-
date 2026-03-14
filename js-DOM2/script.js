@@ -1,71 +1,71 @@
-// the functions to access the elements in html documentation are built inside of "document", so we use document keyword
-// therefore we have to call the document first then the functions
-let element = document.getElementById("text");
-// getElementById is selector helps us to access the element by its #id name
-// once we have the element, we can style it from the script or manipulate with it
-console.log(element);
+// // the functions to access the elements in html documentation are built inside of "document", so we use document keyword
+// // therefore we have to call the document first then the functions
+// let element = document.getElementById("text");
+// // getElementById is selector helps us to access the element by its #id name
+// // once we have the element, we can style it from the script or manipulate with it
+// console.log(element);
 
-// beside getElementById, we have selectors which retrive element by its:
-// getElementsByClass - by elements class
-// getElementsByTagName - by tag name, which type the tag name, which tag we want to retrive
-// getElementsByName - by the 
-let elemP = document.getElementsByTagName("p");
-console.log(elemP);
-// keep in mind, class, name and tagname comes with getElements with s, plural
-// therefore if we log returve item, it will append them in list
-// f.e if we retrive elements with p tag, they will be aranged in list
-// unlike ID, will retrive only one element 
-let elem = document.getElementsByName("div");
-console.log(elem);
-
-
-
-// we can use the variable in which we save the retrived element
-// then write the style keyword, and atrubute what we want to change  
-element.style.fontSize = "20px";
-element.style.color = "red";
-element.style.backgroundColor = "wheat";
+// // beside getElementById, we have selectors which retrive element by its:
+// // getElementsByClass - by elements class
+// // getElementsByTagName - by tag name, which type the tag name, which tag we want to retrive
+// // getElementsByName - by the 
+// let elemP = document.getElementsByTagName("p");
+// console.log(elemP);
+// // keep in mind, class, name and tagname comes with getElements with s, plural
+// // therefore if we log returve item, it will append them in list
+// // f.e if we retrive elements with p tag, they will be aranged in list
+// // unlike ID, will retrive only one element 
+// let elem = document.getElementsByName("div");
+// console.log(elem);
 
 
-// innerHTML changes the input of element and replaces is with the one we assing.
-element.innerHTML = "about us";
+
+// // we can use the variable in which we save the retrived element
+// // then write the style keyword, and atrubute what we want to change  
+//     // element.style.fontSize = "20px";
+//     // element.style.color = "red";
+//     // element.style.backgroundColor = "wheat";
 
 
-// if we want to retrieve the HTML body, we have built in document.body
-body = document.body
-// therefore we can manipulate the body, f.e by changing the bg color
-body.style.backgroundColor = "wheat"
+// // innerHTML changes the input of element and replaces is with the one we assing.
+//     // element.innerHTML = "about us";
 
 
-pElements = document.getElementsByTagName("p");
-console.log(pElements);
-// styling the elements retrieved by class name or tag names are different
-// once they are retrieved, they are appended to the list, 
-// therefore we can style the by using their index, otherwise CP will get confused
-// of which element are we trying to style 
-pElements[1].innerHTML = "contact us";
-// as above, we can use the index to access specoiofic element and style it
+// // if we want to retrieve the HTML body, we have built in document.body
+// body = document.body
+// // therefore we can manipulate the body, f.e by changing the bg color
+// body.style.backgroundColor = "wheat"
 
-// or we can use for loop and acces each element like so
-for(let i = 0; i < pElements.length; i++) {
-    // console.log(pElements[i]);
-    if (i % 2 == 0) {
-        pElements[i].style.color = "green";
-        pElements[i].innerHTML = i;
 
-    } else {
-        pElements[i].style.color = "red";
-        pElements[i].innerHTML = i;
-    }
+// pElements = document.getElementsByTagName("p");
+// console.log(pElements);
+// // styling the elements retrieved by class name or tag names are different
+// // once they are retrieved, they are appended to the list, 
+// // therefore we can style the by using their index, otherwise CP will get confused
+// // of which element are we trying to style 
+// pElements[1].innerHTML = "contact us";
+// // as above, we can use the index to access specoiofic element and style it
 
-}
-// since we can use for loop on elements, we can use the if statement so/
+// // or we can use for loop and acces each element like so
+// for(let i = 0; i < pElements.length; i++) {
+//     // console.log(pElements[i]);
+//     if (i % 2 == 0) {
+//         pElements[i].style.color = "green";
+//         pElements[i].innerHTML = i;
+
+//     } else {
+//         pElements[i].style.color = "red";
+//         pElements[i].innerHTML = i;
+//     }
+
+// }
+// // since we can use for loop on elements, we can use the if statement so/
 
  
 
 
 
-// generate different random colors on div classed containet each time
+// // generate different random colors on div classed containet each time
 function genColor() {
     col1 = (Math.random() * 255 + 1).toFixed();
     col2 = (Math.random() * 255 + 1).toFixed();
@@ -76,56 +76,56 @@ function genColor() {
 }
 
 
-divContainer = document.getElementsByClassName("container");
+// divContainer = document.getElementsByClassName("container");
 
-for (let i = 0; i < divContainer.length; i++) {
-    divContainer[i].style.backgroundColor = genColor();
-    divContainer[i].style.width = `150px`;
-    divContainer[i].style.height = `150px`;
-}
+// for (let i = 0; i < divContainer.length; i++) {
+//     divContainer[i].style.backgroundColor = genColor();
+//     divContainer[i].style.width = `150px`;
+//     divContainer[i].style.height = `150px`;
+// }
 
-// querySelector - is the another way to retrive the elements
-// it addes every retrieved elemen in list, even if we retrieve one element 
-// its also built in document, so whenever we want to use query selector
-// we must write the document keyword before
+// // querySelector - is the another way to retrive the elements
+// // it addes every retrieved elemen in list, even if we retrieve one element 
+// // its also built in document, so whenever we want to use query selector
+// // we must write the document keyword before
 
-// queryselector has different selectors builtinside 
-el = document.querySelectorAll("p");
+// // queryselector has different selectors builtinside 
+// el = document.querySelectorAll("p");
 
-// querySelectorAll - retrive all items by given value
-// if we want to retrive by class name we must write it with dot
-// querySelectorAll(".className") - in a same way we use classes in the css file
-console.log(el);
+// // querySelectorAll - retrive all items by given value
+// // if we want to retrive by class name we must write it with dot
+// // querySelectorAll(".className") - in a same way we use classes in the css file
+// console.log(el);
 
-idSelected = document.querySelectorAll("#text");
-console.log(idSelected);
-// even tough we retrived it with id#, 
-// it adds retrieved elements inside the cycle(list) 
-// therefore if we want to manipulate it we must use index
-idSelected[0].style.color = "red";
+// idSelected = document.querySelectorAll("#text");
+// console.log(idSelected);
+// // even tough we retrived it with id#, 
+// // it adds retrieved elements inside the cycle(list) 
+// // therefore if we want to manipulate it we must use index
+// idSelected[0].style.color = "red";
 
-// querySelectorAll return the all the element it will meet in html documentation
-// but, querySelector return first eleent it meets
-oneElement = document.querySelectorAll("p");
-// since query selector, only retrieves one element, it doesn't adds to cycle
-// therefore we don't need tpp use index to style element with querySelector
-console.log(oneElement);
-oneElement[0].style.color = "green";
+// // querySelectorAll return the all the element it will meet in html documentation
+// // but, querySelector return first eleent it meets
+// oneElement = document.querySelectorAll("p");
+// // since query selector, only retrieves one element, it doesn't adds to cycle
+// // therefore we don't need tpp use index to style element with querySelector
+// console.log(oneElement);
+// oneElement[0].style.color = "green";
 
 
-// not only styling the elements from JS file, 
-// we can also add new class to element 
-oneElement[1].classList.add("pText");
-// we add class on second but indexed 1 p element
-// then we retrieved that exact element by newly added class
-pText = document.getElementsByClassName("pText");
-console.log(pText);
+// // not only styling the elements from JS file, 
+// // we can also add new class to element 
+// oneElement[1].classList.add("pText");
+// // we add class on second but indexed 1 p element
+// // then we retrieved that exact element by newly added class
+// pText = document.getElementsByClassName("pText");
+// console.log(pText);
 
-// even that elements index was 1 in above, 
-// since we retrieved that element, it apended it to new list,
-//  therefore we use index 0 to style it
-pText[0].style.color = "purple"
-pText[0].style.fontSize = "25px"
+// // even that elements index was 1 in above, 
+// // since we retrieved that element, it apended it to new list,
+// //  therefore we use index 0 to style it
+// pText[0].style.color = "purple"
+// pText[0].style.fontSize = "25px"
 
 
 
@@ -177,7 +177,7 @@ function addText() {
 
 
 submitButton = document.getElementById("submitButton");
-submitButton.style.backgroundColor = "green";
+// submitButton.style.backgroundColor = "green";
 
 
 submitText = document.getElementById("submitText");
@@ -213,7 +213,7 @@ function changeContent() {
 // f.e
 paragraph1Content = document.getElementById("paragraph1");
 paragraph2Content = document.getElementById("paragraph2");
-content = paragraph1Content.innerHTML
+// content = paragraph1Content.innerHTML
 
 function displayContent() {
     paragraph2Content.innerText = "fu ra yveri xaar ici"
@@ -248,7 +248,7 @@ function decrease() {
 // // Html კოდში მოცემულია 2 აბზაცი. querySelector–ის გამოყენებით მიიღეთ პირველი აბზაცის ბმული დივიდან
 // // რომლის id-ია "twoParagraphs". მიღებული შედეგი კონსოლზე გამოვიტანოთ.
 let divParagraph = document.querySelector("#twoParagraphs p"); // we can assing child parent parameters in DOM, same as we were doing with css selectors to select children element
-divParagraph.style.color = "red"
+// divParagraph.style.color = "red"
 console.log(`this is ${divParagraph}`);
 
 
@@ -257,7 +257,7 @@ console.log(`this is ${divParagraph}`);
 // Html კოდში მოცემულია 2 აბზაცი. querySelector–ის გამოყენებით მიიღეთ პირველი აბზაცის ბმული რომლის
 // კლასია "p". მიღებული შედეგი კონსოლზე გამოვიტანოთ.
 firstParagraph = document.querySelector(" .p");
-firstParagraph.style.color  = "green"
+// firstParagraph.style.color  = "green"
 // console.log(firstParagraph)
 
 
@@ -392,82 +392,6 @@ function validateEmail() {
         msg.style.display = "inline-block";
     }
 }
-
-
-// create calculator
-// numbers
-function one() {
-    value = document.getElementById("value").value += 1;
-}
-
-function two() {
-    value = document.getElementById("value").value += 2;
-}
-
-function three() {
-    value = document.getElementById("value").value += 3;
-}
-
-function four() {
-    value = document.getElementById("value").value += 4;
-}
-
-function five() {
-    value = document.getElementById("value").value += 5;
-}
-
-function six() {
-    value = document.getElementById("value").value += 6;
-}
-
-function seven() {
-    value = document.getElementById("value").value += 7;
-}
-
-function eight() {
-    value = document.getElementById("value").value += 8;
-}
-
-function nine() {
-    value = document.getElementById("value").value += 9;
-}
-
-// mathmatical expressions
-function add() {
-    value = document.getElementById("value").value += "+";
-}
-
-function subtract() {
-    value = document.getElementById("value").value += "-";
-}   
-
-function multiply() {
-    value = document.getElementById("value").value += "*";
-}   
-
-function devide() {
-    value = document.getElementById("value").value += "/";
-}   
-
-// calculate the result of the expression using eval function
-function result() {
-    // eval function helps us to calculate the mathematical expression, 
-    // which is written in input, and gives us the result
-    // so we don't have to write the function for each mathematical operation, 
-    // we can just write the expression in input and get the result with eval function
-    value = document.getElementById("value").value;
-    window.alert(eval(value));
-    document.getElementById("value").value = "";
-
-}
-
-// clear the input value
-function rem() {
-    document.getElementById("value").value = "";
-    // remove the enterd value in input, and make it empty again
-}
-
-
 
 
 
@@ -605,10 +529,7 @@ function formValidation() {
         var mailValid = true;
     }
 
-
     formPassword = document.getElementsByName("password")[0];
-
-
     var passwordValid;
 
     if (formPassword.value.length < "8") {
@@ -662,38 +583,40 @@ function openFile(event) {
 
 
 
-// dom part2/3 homework
 
+// addEventListener - we have two ways to create the event on html tags
+// we can built in attributes, such as onclick, or onchange... but, 
+// if we want to create event from JS file, we can use addEventListener method, 
+// it takes two argument: event name and function
+// 1: event name - on which event the function must execute
+// 2: function - what the event mumst do
+// ecample: 
+function callFunction(event) {
+    myDiv = document.getElementById("myDiv");
+    myDiv.style.display = "block";
+    myDiv.style.width = "150px";
+    myDiv.style.height = "150px";
+    myDiv.style.backgroundColor = "yellow";
 
-function formValidate() {
-
-    userName = document.getElementsByName("userName")[0].value;
-    if (userName == "" ) {
-        nameMSG = document.getElementById("nameMSG");
-        bothInvalid = document.getElementById("bothInvalid");
-        bothInvalid.textContent = "Invalid username or password. Please try again.";
-        
-        nameMSG.style.display = "block";
-        nameMSG.textContent = "Enter your username!";
-        nameMSG.style.top = "-15px";
-        nameMSG.style.right = "80px";
-
-        return false;
-    } 
-
-    password = document.getElementsByName("password")[0].value;
-    if (password == "" ) {
-        nameMSG.style.display = "none";
-        
-        password = document.getElementById("passMSG");
-        password.style.display = "block";
-        password.textContent = "Enter your password!";
-        password.style.top = "-15px";
-        password.style.right = "80px";
-
-        return false;
-    }
+    // with event parameter we have access to the below created event information
+    console.log(event);
+    // it contains the info about: at what time function was called, at what place on our screen the event happened, 
+    
 }
+document.getElementById("myButton").addEventListener("click", callFunction)
+// when we are creating addEventListener, we must create it on that specific element, on which we want the event to be called
+// another way, we must retrive that specific element and then tell computer to create event on that element
+// beside createing event and call function, it does another job also:
+// it takes the information about the event
+// which we can catch and use that info, for that we need to give parameter to the function
+// all the infromation will be saved in that parameter
+
+
+
+
+
+// target > return the specific html tag, 
+// which we'll retrive or function will execute
 
 
 
