@@ -26,12 +26,25 @@
     // import {test as satesto, myFunc} from "./module.mjs";
 
 // and we can import default func and regular one in one command, 
-import evenOrOdd, {test as satesto, myFunc} from "./module.mjs";
+// import evenOrOdd, {test as satesto, myFunc} from "./module.mjs";
+
+// or we can use asterik symbol which allows us to import everything from the exporter file
+// the asterik returns the object, 
+// keys are the function name
+// values are the function itself
+// therefore we can retrive them, as we retrive values in object 
+import * as everything from "./module.mjs"
+
+let numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+console.log(everything.default(numList));
+
+
+
 // we need to write default func outside the curly braces.
 
 // now it won't work, cause we use the original name, since we rename it wwe must call new name
 
-let numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 // console.log(numList);
 
@@ -42,10 +55,10 @@ console.log("hello world");
 
 // won't work because its renamed
 // isEvenOddNumber(numList);
-evenOrOdd(numList);
+// evenOrOdd(numList);
 
 
-// test() function is renamed to it won't work
-    // test()   
-satesto();
-myFunc()
+// // test() function is renamed to it won't work
+//     // test()   
+// satesto();
+// myFunc()
