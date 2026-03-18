@@ -18,4 +18,6 @@ display how many branches we have:
 delete branch:
     5: git branch -d branchName > deletes branch
 
+
+when we are trying to push new branches, we use command > gut push -u origin newBranchName, not main but newBranchName 
   
