@@ -1,0 +1,21 @@
+git branch allows team to work on the same project without messing up the main code
+we have "main" branch which is used to save the most stable, clean code, approved by testers and lead;
+
+we have two way to create our branches and work with them
+    1: git checkout -b branchName > creates new branch and switches to it
+    2: git branch branchName > creates new branch but won't switches to it and stays orignal branch
+
+when we are creating branch, keep in mind that it creates new branch, from the brach we are currently on
+f.e: if we are on main branch and creating new branch, it uses main branch code and files and to create new one
+in new brach, we will have same code
+
+switch to other branch:
+    3: git checkout otherBranchName > switchis to another branch
+
+display how many branches we have:
+    4: git branch > returns all branch names we hae inside
+
+delete branch:
+    5: git branch -d branchName > deletes branch
+
+  
