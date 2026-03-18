@@ -1,4 +1,4 @@
-git branch allows team to work on the same project without messing up the main code
+cdgit branch allows team to work on the same project without messing up the main code
 we have "main" branch which is used to save the most stable, clean code, approved by testers and lead;
 
 we have two way to create our branches and work with them
